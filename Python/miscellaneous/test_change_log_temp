@@ -1,0 +1,50 @@
+/nao pode ser mudado
+PLAYERSOURCES = \
+	bhv_test.cpp \
+	dale.cpp \
+
+//nao pode ser mudado
+PLAYERHEADERS = \
+	bhv_test.h \
+	dale.h \
+
+///nao pode ser mudado
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/sample_player-bhv_test.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/sample_player-dale.Po@am__quote@
+///
+
+////nao pode ser mudado
+sample_player-bhv_test.o: bhv_test.cpp
+@am__fastdepCXX_TRUE@	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-bhv_test.o -MD -MP -MF $(DEPDIR)/sample_player-bhv_test.Tpo -c -o sample_player-bhv_test.o `test -f 'bhv_test.cpp' || echo '$(srcdir)/'`bhv_test.cpp
+@am__fastdepCXX_TRUE@	$(am__mv) $(DEPDIR)/sample_player-bhv_test.Tpo $(DEPDIR)/sample_player-bhv_test.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	source='bhv_test.cpp' object='sample_player-bhv_test.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCXX_FALSE@	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-bhv_test.o `test -f 'bhv_test.cpp' || echo '$(srcdir)/'`bhv_test.cpp
+////
+
+/////nao pode ser mudado
+sample_player-bhv_test.obj: bhv_test.cpp
+@am__fastdepCXX_TRUE@	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-bhv_test.obj -MD -MP -MF $(DEPDIR)/sample_player-bhv_test.Tpo -c -o sample_player-bhv_test.obj `if test -f 'bhv_test.cpp'; then $(CYGPATH_W) 'bhv_test.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_test.cpp'; fi`
+@am__fastdepCXX_TRUE@	$(am__mv) $(DEPDIR)/sample_player-bhv_test.Tpo $(DEPDIR)/sample_player-bhv_test.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	source='bhv_test.cpp' object='sample_player-bhv_test.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCXX_FALSE@	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-bhv_test.obj `if test -f 'bhv_test.cpp'; then $(CYGPATH_W) 'bhv_test.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_test.cpp'; fi`
+
+sample_player-dale.o: dale.cpp
+@am__fastdepCXX_TRUE@	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-dale.o -MD -MP -MF $(DEPDIR)/sample_player-dale.Tpo -c -o sample_player-dale.o `test -f 'dale.cpp' || echo '$(srcdir)/'`dale.cpp
+@am__fastdepCXX_TRUE@	$(am__mv) $(DEPDIR)/sample_player-dale.Tpo $(DEPDIR)/sample_player-dale.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	source='dale.cpp' object='sample_player-dale.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCXX_FALSE@	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-dale.o `test -f 'dale.cpp' || echo '$(srcdir)/'`dale.cpp
+////
+
+/////nao pode ser mudado
+sample_player-dale.obj: dale.cpp
+@am__fastdepCXX_TRUE@	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-dale.obj -MD -MP -MF $(DEPDIR)/sample_player-dale.Tpo -c -o sample_player-dale.obj `if test -f 'dale.cpp'; then $(CYGPATH_W) 'dale.cpp'; else $(CYGPATH_W) '$(srcdir)/dale.cpp'; fi`
+@am__fastdepCXX_TRUE@	$(am__mv) $(DEPDIR)/sample_player-dale.Tpo $(DEPDIR)/sample_player-dale.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	source='dale.cpp' object='sample_player-dale.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCXX_FALSE@	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-dale.obj `if test -f 'dale.cpp'; then $(CYGPATH_W) 'dale.cpp'; else $(CYGPATH_W) '$(srcdir)/dale.cpp'; fi`
+
+
+///
