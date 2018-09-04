@@ -18,13 +18,19 @@ bool solution1(string str1, string str2){
 
 bool solution2(string str1, string str2){
 	if(str1.size()!=str2.size()) return false;
-
-	for(int i=0; i<str1.size();i++){
-		
+	
+	int temp_size = 0;
+	for(int i=0; i<str1.length();i++){
+		temp_size = str2.length();
+		str2.erase(remove(str2.begin(),str2.end(), str1.at(i)),str2.end());
+		if(temp_size == str2.length()) break;
 	}
+	if(str2.length() == 0) return true;
+	else return false;
 }
 
 int main(){
-	cout<<"Res: "<<solution1("abc","bcac")<<endl;
+	cout<<"Res1: "<<solution1("abc","bcac")<<endl;
+	cout<<"Res2: "<<solution2("abc","bca")<<endl;
 	return 0;
 }
