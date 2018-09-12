@@ -7,7 +7,7 @@ using namespace std;
 class Solution
 {
 public:
-	//bruto force
+	//bruto force - complexity of O(n^2)
 	vector<int> twoSum_sol_1(vector<int> &nums, int target){
 		int n = nums.length();
 		for(int i = 0; i<n;++i){
