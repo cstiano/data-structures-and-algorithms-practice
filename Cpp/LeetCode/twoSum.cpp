@@ -11,7 +11,7 @@ public:
 	vector<int> twoSum_sol_1(vector<int> &nums, int target){
 		int n = nums.length();
 		for(int i = 0; i<n;++i){
-			for (int j = 0; i < n; ++j)
+			for (int j = i+1; i < n; ++j)
 			{
 				if((nums[i]+nums[j])==target){
 					vector <int> v;
@@ -36,6 +36,6 @@ int main(){
  	for(vector<int>::iterator it = result.begin(); it!=result.end(); ++it){
  		cout<<(*it)<<endl;
  	}
- 	
+
 	return 0;
 }
