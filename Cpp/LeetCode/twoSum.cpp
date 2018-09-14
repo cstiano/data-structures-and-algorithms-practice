@@ -29,7 +29,7 @@ public:
 					vector <int> v;
 					v.push_back(i);
 					v.push_back(j);
-					return v;	
+					return v;
 				}
 			}
 		}
@@ -41,26 +41,43 @@ public:
 		for(int i = 0; i < nums.size(); ++i)
 		{
 			if(hashTable.count(target - nums[i])!=0){
-				std::vector <int> res;
-				res.push_back(hashTable.at(nums[i]));
+				std::cout<<"Achado "<<target - nums[i]<<" "<<hashTable[target - nums[i]]<<" "<< i <<std::endl;
+				std::vector <int> res; //{hashTable.at(nums[i]), hashTable.at(target - nums[i])};
 				res.push_back(hashTable.at(target - nums[i]));
+				res.push_back(i);
+				std::cout<< "found" << std::endl;				
 				return res;			
 			}
-			if(hashTable.count(nums[i]) == 0){
-				hashTable.insert(std::pair<int,int>(nums[i],i));			
+			if(hashTable[nums[i]] == 0){
+				hashTable.insert(std::pair<int,int>(nums[i],i));
+				hashTable[nums[i]] = i;					
+				std::cout<<"Not Achado "<< nums[i]<<" "<< i << " "<<hashTable[nums[i]]<<std::endl;
+				//std::cout<<hashTable[nums[i]]<<std::endl;
+				//hashTable.insert(std::pair<int,int>(nums[i],i));
+							
 			}		
 		}
 	}
-	Solution();
-	~Solution();
+	Solution(){
+		std::cout<<"Criado"<<std::endl;	
+	};
+	
 	
 };
 
 int main(){
-	int arr[5] = {2,7,11,15};
-	vector<int> v(arr, arr + sizeof(arr)/sizeof(int));
-	std::map <int,int> test;
-	test.insert(std::pair<int,int> (1,2));
-	std::cout<< test.at(1)<<std::endl;
+	//int arr[5] = [2,7,11,15];
+	//vector<int> v (2,4,3,7,10);
+	vector<int> v;
+	v.push_back(3);
+	v.push_back(2);
+	v.push_back(4);
+//	v.push_back(15);
+	Solution s;
+	vector<int> res = s.twoSum_sol_2(v, 6);
+	for(vector<int>::iterator it = res.begin(); it!=res.end(); ++it)
+	{
+		std::cout<<*it<<std::endl;
+	}
 	return 0;
 }
