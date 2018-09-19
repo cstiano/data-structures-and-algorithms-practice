@@ -19,7 +19,7 @@ int solution1(string s)
 	{
 		if(i+1<s.length())
 		{
-			if(s[i]>=s[i+1])
+			if(symbols[s[i]]>=symbols[s[i+1]])
 			{
 				pre_sum += symbols[s[i]]-sub;
 				sub = 0;

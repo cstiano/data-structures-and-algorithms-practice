@@ -37,8 +37,7 @@ int solution1(string s)
 		}
 		else{
 			pre_sum += symbols[s[i]]-sub;		
-		}
-		cout<<pre_sum<<endl;			
+		}			
 	}
 	return pre_sum;
 }
