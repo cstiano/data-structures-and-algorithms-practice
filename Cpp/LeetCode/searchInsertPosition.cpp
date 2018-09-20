@@ -1,0 +1,36 @@
+#include <vector>
+#include <iostream>
+
+using namespace std;
+typedef vector<int> vi;
+
+
+int binarySearchIndex(vi& A, int l, int r, int x){
+	if(r>=l){
+		int mid = l + (r-l)/2;
+		if(A[mid]==x) return mid;
+		if((r-l)/2 == 0){
+			if(mid == 0 && A[mid] > x) return mid;
+			if(A[mid] > x) return mid;
+			else return mid+1;		
+		}
+		if(A[mid] > x) return binarySearchIndex(A, l, mid, x);
+		else return binarySearchIndex(A, mid+1, r, x);	
+	}
+}
+
+int solution1(vi& nums, int target){
+	return binarySearchIndex(nums, 0, nums.size(), target);	
+}
+
+
+int main(){
+	vi input;
+	input.push_back(1);
+	input.push_back(3);
+	input.push_back(5);
+	input.push_back(7);
+	input.push_back(10);	
+	cout<<solution1(input, 4)<<endl;
+	return 0;
+}
