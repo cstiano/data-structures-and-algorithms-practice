@@ -1,0 +1,23 @@
+#include <string>
+#include <iostream>
+
+using namespace std;
+
+int lenghtOfLastWord(string s){
+	int count = 0;
+	if(s.empty()) return 0;	
+	for(int i = s.length()-1; i>=0; --i){
+		cout<<s[i]<<count<<endl;
+		if(s[i] == ' ') {
+			cout<<"entrou"<<endl;
+			return count;
+		}
+		count ++;	
+	}
+	return count;
+}
+
+int main(){
+	cout<<lenghtOfLastWord("a")<<endl;
+	return 0;
+}
