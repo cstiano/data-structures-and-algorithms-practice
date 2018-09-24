@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+
+int mySqrt(int x){
+	int ant = 0;		
+	for(int i = x/2; i>0; --i){
+		if(i*i == x) return i;
+		else{
+			if(x>i*i && x<ant*ant) return i;
+			else ant = i;	
+		}		
+	}	
+}
+
+int main(){
+	cout<<mySqrt(8)<<endl;
+	return 0;
+}
