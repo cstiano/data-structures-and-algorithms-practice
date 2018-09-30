@@ -12,13 +12,18 @@ struct TreeNode{
 	TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 
-vector<vector<int>> levelOrderBottom(TreeNode* root){
+vector<vector<int> > levelOrderBottom(TreeNode* root){
 	if(root==NULL) return NULL;
+	TreeNode *cur;	
 	queue<TreeNode*> bfs_queue;
-	vector<vector<int>> result;
+	vector<vector<int> > result;
+	result.push_back((vector<int>)(root->val));
 	bfs_queue.push(root);
 	while(!bfs_queue.empty()){
-
+		cur = bfs_queue.pop();
+		if(cur->left != NULL && cur->right != NULL){}
+		else if(cur->left != NULL && cur->right == NULL){}
+		else if(cur->left == NULL && cur->right != NULL){}
 	} 
 }
 
