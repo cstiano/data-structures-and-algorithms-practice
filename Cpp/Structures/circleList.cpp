@@ -1,4 +1,7 @@
 #include <bits/stdc++.h>
+#include <thread>
+#include <chrono>
+
 
 struct Node{
 	int val;
@@ -17,19 +20,18 @@ void insert (Node *refPoint, int val){
 }
 
 int main(){
-	Node *n = new Node(1);
+	Node *n = new Node(0);
 	initCircleList(n);
-	insert(n,2);
-	insert(n,3);
-	insert(n,4);
-	insert(n,5);
-	insert(n,6);
+	for(int i = 60; i>0;--i){
+		insert(n,i);
+	} 
 	
 	Node* cur = n;	
-	std::cout<<"Oie"<<std::endl;	
-	for(int i = 0; i<12; ++i){
-		printf("%d\n", cur->val);
+	while(cur!=NULL){
+		std::cout<<cur->val<<std::endl;
+		std::this_thread::sleep_for (std::chrono::seconds(1));	
 		cur = cur->next;	
 	}
+
 	return 0;
 }
